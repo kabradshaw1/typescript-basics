@@ -1,4 +1,4 @@
-import faker from "@faker-js/faker";
+import {faker} from "@faker-js/faker";
 
 export class Company {
   companyName: string;
@@ -9,14 +9,10 @@ export class Company {
   }
 
   constructor() {
-    // @ts-ignore
     this.companyName = faker.company.companyName();
-    // @ts-ignore
     this.catchPhrase = faker.company.catchPhrase();
     this.location = {
-      // @ts-ignore
       lat: parseFloat(faker.address.latitude()),
-      // @ts-ignore
       lng: parseFloat(faker.address.longitude())
     }
   }
